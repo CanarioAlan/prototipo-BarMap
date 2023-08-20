@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarMap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylos.css">
+</head>
+
+<body>
+    <div class="preload">
+    </div>
+    <header>
+        <img src="img/logo-barmap.png" alt="logo" class="logo">
+        <button class="a-menu" id="aMenu"></button>
+        <nav class="nav" id="nav">
+            <button class="c-menu" id="cMenu"></button>
+            <div class="nav-list">
+                <h2 class="title-P">Filtrar busqueda</h2>
+                <section>
+                    <h3 class="nav-title">medios de pagos</h3>
+                    <div class="nav-pagos contend-nav">
+                        <div class="pagos-list">
+                            <input type="checkbox" name="efectivo" id="efectivo">
+                            <label for="efectivo">efectivo</label>
+                        </div>
+                        <div class="nav-pagos">
+                            <input type="checkbox" name="debito" id="debito">
+                            <label for="debito ">debito</label>
+                        </div>
+                        <div class="nav-pagos">
+                            <input type="checkbox" name="credito" id="credito">
+                            <label for="credito">credito</label>
+                        </div>
+                        <div class="nav-pagos">
+                            <input type="checkbox" name="billeteras" id="billeteras">
+                            <label for="billeteras">billeteras virtuales</label>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="nav-title">otros filtros</h3>
+                    <div class="nav-otros contend-nav">
+                        <div class="otros-list">
+                            <input type="checkbox" name="friendly" id="friendly">
+                            <label for="friendly">pet friendly</label>
+                        </div>
+                        <div class="otros-list">
+                            <input type="checkbox" name="mesas-interior" id="mesas-in">
+                            <label for="mesas-in">mesas en interior</label>
+                        </div>
+                        <div class="otros-list">
+                            <input type="checkbox" name="fumadores" id="fumadores">
+                            <label for="fumadores">espacio para fumadores</label>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="nav-title">comida</h3>
+                    <div class="nav-comida contend-nav">
+                        <div class="comida-list">
+                            <input type="checkbox" name="pizza" id="pizza">
+                            <label for="pizza">pizza</label>
+                        </div>
+                        <div class="comida-list">
+                            <input type="checkbox" name="al-plato" id="al-plato">
+                            <label for="al-plato">al plato</label>
+                        </div>
+                        <div class="comida-list">
+                            <input type="checkbox" name="hamburguesa" id="hamburguesa">
+                            <label for="hamburguesa">hamburguesas</label>
+                        </div>
+                        <div class="comida-list">
+                            <input type="checkbox" name="cesero" id="casero">
+                            <label for="casero">casero</label>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="nav-title">distancia</h3>
+                    <input type="range" name="price" id="price" min="100" max="900" step="100" value="100" />
+                    <output class="price-output" for="price"></output>
+                </section>
+                <a href="#">aplicar</a>
+            </div>
+            <section class="lgin">
+                <a href="#">registra tu local</a>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section class="buscador">
+            <input type="search" name="busqueda" id="busqueda">
+        </section>
+        <section class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1428.131937530711!2d-60.70979000263544!3d-31.642355697814423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1692496480774!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
