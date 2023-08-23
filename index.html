@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarMap</title>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="stylos.css">
 </head>
 
@@ -16,6 +20,7 @@
     </div>
     <header>
         <img src="img/logo-barmap.png" alt="logo" class="logo">
+        <h1>Bar<span>Map</span></h1>
         <button class="a-menu" id="aMenu"></button>
         <nav class="nav" id="nav">
             <button class="c-menu" id="cMenu"></button>
@@ -30,7 +35,7 @@
                         </div>
                         <div class="nav-pagos">
                             <input type="checkbox" name="debito" id="debito">
-                            <label for="debito ">debito</label>
+                            <label for="debito">debito</label>
                         </div>
                         <div class="nav-pagos">
                             <input type="checkbox" name="credito" id="credito">
@@ -93,14 +98,25 @@
         </nav>
     </header>
     <main>
-        <section class="buscador">
+        <!-- <section class="buscador">
             <input type="search" name="busqueda" id="busqueda">
+        </section> -->
+        <section class="contend-map">
+            <div class="map" id="contend-mapa">
+            </div>
         </section>
-        <section class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1428.131937530711!2d-60.70979000263544!3d-31.642355697814423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1692496480774!5m2!1ses-419!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="buscado">
+            <div class="tarjetas">
+                <h3>el viejo almacen</h3>
+                <div class="circulo"></div>
+                <img src="#" alt="el viejo almacen foto">
+                <div class="links-cr">
+                    <a href="#">ver carta</a>
+                    <a href="#">trazar ruta</a>
+                </div>
+            </div>
+            <div class="tarjetas"></div>
+            <div class="tarjetas"></div>
         </section>
     </main>
     <footer></footer>
