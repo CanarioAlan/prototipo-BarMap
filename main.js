@@ -2,12 +2,23 @@
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#aMenu");
 const cerrar = document.querySelector("#cMenu");
+const busq = document.querySelector("#busqueda");
+const aRuta = document.querySelector("#aplicado");
+const cRuta = document.querySelector("#c-busq");
 
 abrir.addEventListener("click", () => {
   nav.classList.add("nav-visi");
 });
 cerrar.addEventListener("click", () => {
   nav.classList.remove("nav-visi");
+});
+
+// cerrar y habir busqueda
+aRuta.addEventListener("click", () => {
+  busq.classList.add("buscado-act");
+});
+cRuta.addEventListener("click", () => {
+  busq.classList.remove("buscado-act");
 });
 // mostrar barra de progreso
 const price = document.querySelector("#price");

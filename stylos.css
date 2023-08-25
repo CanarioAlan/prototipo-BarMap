@@ -38,8 +38,13 @@ h1 span {
   height: 30px;
   border: none;
   background-color: var(--Cbanner);
+  z-index: 2;
 }
 .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -48,16 +53,13 @@ h1 span {
   right: 0;
   left: 0;
   background-color: var(--Crosa);
-  padding: 1.5rem;
   background-image: url(img/banner.png);
   background-size: 35rem;
   text-align: end;
   text-transform: capitalize;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   z-index: 5;
+  text-align: center;
 }
 .nav-visi {
   opacity: 1;
@@ -72,16 +74,17 @@ h1 span {
   height: 40px;
   border: none;
   background-color: var(--Cbanner);
+  text-align: start;
 }
 .nav-list {
   text-align: center;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 .title-P {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
 .nav-title {
@@ -92,110 +95,128 @@ h1 span {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin: 2rem 0;
 }
-.contend-nav label {
-  font-size: 1.5rem;
-  font-weight: 700;
+.contend-nav input {
+  margin: 0.5rem;
 }
-.nav-list input {
-  accent-color: var(--Cicons);
-}
-.nav-list output {
-  font-size: 2rem;
-}
-.nav input[type="checkbox"] {
+.contend-nav input[type="checkbox"] {
   display: none;
 }
-.nav input[type="checkbox"]:checked ~ label {
+
+.contend-nav label {
+  color: var(--Cnegro);
   padding: 1rem 1rem 1rem 2.5rem;
-  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.contend-nav input[type="checkbox"]:checked ~ label {
+  font-weight: 700;
   background-image: url(img/check.svg);
   background-repeat: no-repeat;
-  background-size: 3rem;
-  background-position-y: 3px;
-  background-position-x: -1px;
-  border: 1px solid var(--Cverde);
-  -webkit-box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.75);
+  background-position-y: center;
+}
+.price-output {
+  font-size: 1.5rem;
 }
 .nav-list a {
+  width: 150px;
+  color: var(--Cnegro);
   text-decoration: none;
   font-size: 2rem;
-  color: var(--Cblanco);
-  background-color: green;
-  border-radius: 5px;
-  width: 100px;
+  text-transform: capitalize;
   padding: 0.5rem;
-  margin-left: auto;
-}
-.lgin {
-  text-align: center;
+  background-color: var(--Cverde);
+  border-radius: 10px;
+  margin: 0 50%;
 }
 .lgin a {
   text-decoration: none;
-  font-size: 2.5rem;
-  background-color: var(--Cgris);
-  padding: 1rem 3.5rem 1rem 1rem;
-  border-radius: 10px;
-  color: var(--Cblanco);
+  font-size: 1.5rem;
+  color: var(--Cnegro);
+  background-color: var(--Cblanco);
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
   background-image: url(img/login.svg);
   background-repeat: no-repeat;
-  background-position-x: 222px;
+  background-size: 2.5rem;
   background-position-y: center;
-  background-size: 3.5rem;
-  text-align: start;
+  background-position-x: right;
+  border-radius: 5px;
 }
 /* main  */
-.buscador {
-  position: absolute;
-  top: 125px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.buscador input {
-  width: 220px;
-  height: 3rem;
-  background-image: url(img/search.svg);
-  background-repeat: no-repeat;
-  background-position-x: 180px;
-  background-position-y: center;
-  background-size: 3rem;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 1240, 0.1);
-  color: var(--Cnegro);
-}
 #contend-mapa {
   max-width: 100%;
   height: calc(100vh - 100.7px);
 }
-.tarjetas {
+.buscado {
   width: 100%;
-  height: 50px;
-  background-color: #31e64d;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
+  height: 80vh;
   padding: 1rem;
+  z-index: 1;
+  background-color: var(--Cblanco);
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 100.7px;
+  bottom: 0;
+  display: none;
+}
+.buscado-act {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.tarjetas {
+  border: 1px solid var(--Cicons);
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+.title-cir {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   text-transform: capitalize;
 }
-.tarjetas h3 {
-  font-size: 3rem;
+.title-cir h3 {
+  font-size: 2.5rem;
 }
 .circulo {
   width: 50px;
   height: 50px;
+  background-color: var(--Cverde);
   border-radius: 50%;
-  background-color: #000;
-  margin: 0 auto;
 }
-.tarjetas img {
-  width: 100px;
-  height: 60px;
+.orang {
+  background-color: var(--Cicons);
 }
-.links-cr {
+.red {
+  background-color: red;
+}
+.img-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.img-links img {
+  padding: 0.5rem;
+  width: 150px;
+  border: 1px solid var(--Cicons);
+}
+.links-cart {
   display: flex;
   flex-direction: column;
+}
+.links-cart a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--Cnegro);
+  background-color: var(--Cgris);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+.cerrar {
+  background-color: var(--Cicons);
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
 }

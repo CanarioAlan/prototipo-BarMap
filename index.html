@@ -24,8 +24,8 @@
         <button class="a-menu" id="aMenu"></button>
         <nav class="nav" id="nav">
             <button class="c-menu" id="cMenu"></button>
+            <h2 class="title-P">Filtrar busqueda</h2>
             <div class="nav-list">
-                <h2 class="title-P">Filtrar busqueda</h2>
                 <section>
                     <h3 class="nav-title">medios de pagos</h3>
                     <div class="nav-pagos contend-nav">
@@ -90,7 +90,7 @@
                     <input type="range" name="price" id="price" min="100" max="900" step="100" value="100" />
                     <output class="price-output" for="price"></output>
                 </section>
-                <a href="#">aplicar</a>
+                <a href="#" id="aplicado">aplicar</a>
             </div>
             <section class="lgin">
                 <a href="#">registra tu local</a>
@@ -105,18 +105,51 @@
             <div class="map" id="contend-mapa">
             </div>
         </section>
-        <section class="buscado">
+        <section class="buscado" id="busqueda">
             <div class="tarjetas">
-                <h3>el viejo almacen</h3>
-                <div class="circulo"></div>
-                <img src="#" alt="el viejo almacen foto">
-                <div class="links-cr">
-                    <a href="#">ver carta</a>
-                    <a href="#">trazar ruta</a>
+                <div class="title-cir">
+                    <h3>el viejo almacen</h3>
+                    <div class="circulo"></div>
+                </div>
+                <div class="img-links">
+                    <img src="https://png.pngtree.com/background/20230525/original/pngtree-bar-in-a-retro-looking-environment-picture-image_2734282.jpg"
+                        alt="el viejo almacen foto">
+                    <div class="links-cart">
+                        <a href="#">ver carta</a>
+                        <a href="#">trazar ruta</a>
+                    </div>
                 </div>
             </div>
-            <div class="tarjetas"></div>
-            <div class="tarjetas"></div>
+            <div class="tarjetas">
+                <div class="title-cir">
+                    <h3>hammer bar</h3>
+                    <div class="circulo orang"></div>
+                </div>
+                <div class="img-links">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipN20F-VpaFNXLu2QnCylr1b9PnAr58E1O_ZVSHG=s680-w680-h510"
+                        alt="el viejo almacen foto">
+                    <div class="links-cart">
+                        <a href="#">ver carta</a>
+                        <a href="#">trazar ruta</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tarjetas">
+                <div class="title-cir">
+                    <h3>choperia santa fe</h3>
+                    <div class="circulo red"></div>
+                </div>
+                <div class="img-links">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY5PVoq2Vkt_gtKk4K4VsWOYxe14K1wzO3_iQRiSZJSpEHoocICM8ODLiPha38RQxhp5Q&usqp=CAU"
+                        alt="el viejo almacen foto">
+                    <div class="links-cart">
+                        <a href="#">ver carta</a>
+                        <a href="#">trazar ruta</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="cerrar" id="c-busq">Cerrar</button>
         </section>
     </main>
     <footer></footer>
