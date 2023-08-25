@@ -16,6 +16,7 @@ cerrar.addEventListener("click", () => {
 // cerrar y habir busqueda
 aRuta.addEventListener("click", () => {
   busq.classList.add("buscado-act");
+  nav.classList.remove("nav-visi");
 });
 cRuta.addEventListener("click", () => {
   busq.classList.remove("buscado-act");
